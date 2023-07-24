@@ -46,8 +46,8 @@ Los usuarios deben ser capaces de:
 
 ### Enlaces
 
-- URL de la solución: [Github](https://your-solution-url.com)
-- URL del sitio en vivo: [Netlify](https://your-live-site-url.com)
+- URL de la solución: [Github](https://github.com/jean266/suscripcion)
+- URL del sitio en vivo: [Netlify](https://dashing-capybara-1eb0a4.netlify.app/)
 
 ## Mi proceso
 
