@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Suscripción</title>
+  <link rel="stylesheet" href="build/css/app.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+</head>
+<body class="container-flex">
+
+  <main class="container"> <!--.container -->
+
+    <div class="container_form"> <!-- .container_form -->
+      <h1 class="title_form text-center margin-none">Stay updated!</h1>
+      <p class="info_title margin-none">Join 60,000+ product managers receiving monthly updates on:</p>
+
+      <div class="info_form">
+
+        <div class="list"> 
+          <img src="assets/images/icon-list.svg" alt="icon" class="list_icon">
+          <span class="list_info">Product discovery and building what matters</span>
+        </div>
+
+        <div class="list">
+          <img src="assets/images/icon-list.svg" alt="icon" class="list_icon">
+          <span class="list_info">Measuring to ensure updates are a success</span>
+        </div>
+
+        <div class="list">
+          <img src="assets/images/icon-list.svg" alt="icon" class="list_icon">
+          <span class="list_info">And much more!</span>
+        </div>
+
+      </div>
+
+      <form method="POST" class="form" id="form"> <!-- .form -->
+
+        <div class="div_email">
+          <label for="email">Email address</label>
+        </div>
+        <input type="email" name="email" id="email" placeholder="email@company.com">
+
+        <input type="submit" value="Subcribe to monthly newsletter" class="form_btn hover">
+
+      </form> <!-- .form -->
+
+      <div class="spinner oculto">
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      </div>
+
+    </div> <!-- .container_form -->
+
+    <div class="image_form"> <!-- .image_form -->
+
+      <picture>
+        <source srcset="assets/images/illustration-sign-up-mobile.svg" media="(max-width: 1000px)">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="illustration">
+       </picture>
+
+    </div> <!-- .image_form -->
+  
+  </main> <!-- .container -->
+  
+  <script src="build/js/app.js"></script>
+</body>
+</html>
+

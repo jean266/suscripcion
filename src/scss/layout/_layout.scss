@@ -1,0 +1,141 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.container {
+    padding: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    gap: 5rem;
+
+    .container_form {
+        flex-basis: 100%;
+    }
+    
+    .image_form {
+        flex-basis: 100%;
+
+    }
+
+    @include m.desktop {
+        padding: 0;
+        flex-direction: column-reverse;
+        gap: 0;
+        margin: 5rem;
+    }
+
+    @include m.telefono {
+        margin: 0;
+        border-radius: 0;
+    }
+
+}
+
+.container_form {
+    align-self: center;
+
+    @include m.desktop {
+        padding: 0 4rem;
+    }
+
+    .title_form {
+        font-weight: v.$bold;
+        font-size: 5rem;
+
+        @include m.desktop {
+          text-align: left;
+          font-size: 3rem;
+        }
+    }
+
+    .info_form {
+        margin: 3rem 0 ;
+
+        @include m.desktop {
+            margin: 2rem 0 4rem 0;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 1rem;
+    
+            .list_icon {
+                width: 2rem;
+            }
+        }
+    }
+}
+
+.form {
+
+    label,
+    .alert {
+        font-weight: v.$bold;
+        font-size: 1.3rem;
+        color: v.$slateGrey;
+        margin-bottom: .5rem;
+    }
+    input {
+        width: 100%;
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 1px solid v.$grey;
+        margin-bottom: 2.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    input[type="submit"] {
+        background-color: v.$slateGrey;
+        color: v.$white;
+        font-weight: v.$bold;
+        border: none;
+
+        &:focus-visible {
+            outline: 2px solid v.$slateGrey;
+        }
+
+
+    }
+}
+
+.hover:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, v.$fuchsia 0%, v.$tomato 100%);
+    box-shadow: 0px 7px 23px 0px v.$tomato;
+}
+
+// Alerta
+.div_email {
+    display: flex;
+    justify-content: space-between;
+
+    .alert {
+        color: v.$tomato;
+    }
+}
+
+.active {
+    border: 1px solid v.$tomato !important;
+    background-color: lighten(v.$tomato, 25%);
+
+    &::placeholder {
+        color: v.$tomato;
+    }
+
+    &:focus-visible {
+        outline: 2px solid  v.$tomato;
+    }
+
+}
+
+.spinner {
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}

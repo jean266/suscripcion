@@ -1,0 +1,74 @@
+
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.success {
+    max-width: 40rem;
+    padding: 2rem;
+    
+    .success_info {
+        margin-top: 0;
+
+        @include m.telefono {
+            margin-top: 10vh;
+        }
+    }
+    
+    @include m.desktop {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem;
+    }
+
+    @include m.telefono {
+        justify-content: space-between;
+        max-width: 100vw;
+        height: 100vh;
+    }
+     
+    img {
+        width: 5rem;
+        margin-bottom: 0rem;
+
+        @include m.telefono {
+            margin-bottom: 3rem;
+            width: 7rem;
+        }
+    }
+    h2 {
+        margin: 2rem 0;
+        text-align: left;
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: v.$bold;
+
+        @include m.telefono {
+            font-size: 4rem;
+            margin: 0;
+        }
+    }
+    p {
+        color: v.$slateGrey;
+        span {
+            font-weight: v.$bold;
+        }
+    }
+    button {
+        width: 100%;
+        background-color: v.$slateGrey;
+        padding: 2rem;
+        color: v.$white;
+        border: none;
+        border-radius: 1rem;
+        display: inline;
+
+        @include m.telefono {
+            justify-content: space-between;
+            max-width: 100vw;
+        }
+
+        & {
+            justify-self: flex-end;
+        }
+    }
+}
